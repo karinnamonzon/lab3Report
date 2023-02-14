@@ -13,10 +13,70 @@ The `grep` command is used to search for patterns in files andl directories acco
 Displays only the matched pattern. By default, `grep` usually returns the whole line that has the matched string but the `-o` allows it to only siplay the matched pattern. This is ran using the format: `grep -o "<pattern>" <file_path>` Here is an example of using `grep -o`
 
 Running `$  grep -o "vistas" written_2/travel_guides/berlitz1/*.txt`
-![Image](https://github.com/karinnamonzon/lab3Report/blob/main/grepO1.png?raw=true)
+```
+$ grep -o "vistas" written_2/travel_guides/berlitz1/*.txt
+written_2/travel_guides/berlitz1/IntroDublin.txt:vistas
+written_2/travel_guides/berlitz1/IntroLakeDistrict.txt:vistas
+written_2/travel_guides/berlitz1/IntroMadeira.txt:vistas
+written_2/travel_guides/berlitz1/WhereToIbiza.txt:vistas
+written_2/travel_guides/berlitz1/WhereToIbiza.txt:vistas
+written_2/travel_guides/berlitz1/WhereToIsrael.txt:vistas
+written_2/travel_guides/berlitz1/WhereToJerusalem.txt:vistas
+written_2/travel_guides/berlitz1/WhereToJerusalem.txt:vistas
+written_2/travel_guides/berlitz1/WhereToLakeDistrict.txt:vistas
+written_2/travel_guides/berlitz1/WhereToMadeira.txt:vistas
+```
 
 Running `$  grep -o "pyramid" written_2/travel_guides/berlitz1/*.txt`
-![Image](https://github.com/karinnamonzon/lab3Report/blob/main/grepOpyramid.png?raw=true)
+```
+$ grep -o "pyramid" written_2/travel_guides/berlitz1/*.txt
+written_2/travel_guides/berlitz1/HistoryEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/HistoryJapan.txt:pyramid
+written_2/travel_guides/berlitz1/IntroEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/IntroEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/IntroLasVegas.txt:pyramid
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToFrance.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToFrance.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToFrance.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToFrance.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIndia.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIsrael.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToIsrael.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToJapan.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToJerusalem.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToLosAngeles.txt:pyramid
+written_2/travel_guides/berlitz1/WhereToLosAngeles.txt:pyramid
+```
 
 `grep -o` can provide information on the exact file where the pattern is found but does not show whole line. 
 
@@ -49,7 +109,7 @@ Running `$  grep -rl "giraffe" written_2/travel_guides/berlitz2`
 $ grep -rl "giraffe" written_2/travel_guides/berlitz2
 written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
 ```
-This second example searches for the pattern in a specified path `travel_guides/berlitz2` withing the `written_2` directory. 
+This second example searches for the pattern in a specified path `travel_guides/berlitz2` withing the `written_2` directory. It shows that only the `PuertoRico-WhatToDo.txt` has the pattern.
 
 ---
 
@@ -176,7 +236,7 @@ The results show that 8 of the `.txt` files in `written_2/travel_guides/berlitz1
 `grep -rn`
 Recursively searches for pattern where `r` pertains to recursion and `n` pertains to find the file and line where the pattern is found. This command is ran using the format: `grep -rn "<pattern>" <file_path>`
 
-Running
+Running `grep -rn "John Simcoe" written_2/` 
 ```
 $  grep -rn "John Simcoe" written_2/
 written_2/travel_guides/berlitz2/Canada-History.txt:25:With great pioneering skill, Upper Canada’s first lieutenant governor, John Simcoe, pushed new highways north from Lake Ontario and west to Hamilton. He established the provincial capital at a trading post, Toronto, in the heart of a malarial swamp, and renamed it York. A landed gentry made up of army officers, government officials, and commercial speculators ran the province, creating a hereditary aristocracy known as the Family Compact. More Americans were lured over the border with land grants; the population rose from 14,000 in 1792 to 90,000 by 1812. French-Canadians were also multiplying rapidly, from 60,000 when New France was abandoned in 1760 to 330,000 fifty years later.
@@ -184,3 +244,12 @@ written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:26:Ethnically diverse, Tor
 written_2/travel_guides/berlitz2/Canada-WhereToGo.txt:27:Following John Simcoe’s military grid pattern, Toronto’s main arteries run from the lakefront north: Spadina and University Avenues, Bay, Yonge, and Church Streets; and east–west: Front, King, Queen, Dundas, College-Carlton, and Bloor Streets. Our sightseeing itinerary starts down at the waterfront and works north through the business district to the chic shopping and museum area. As an alternative, especially if you have children, you may prefer to start downtown, around Union Station, and visit the other sights to the north before coming back to relax among the recreational attractions of the waterfront. Getting around the city is quite simple, but while downtown, park your car and walk or use the buses or subway.
 ```
 Shows that the file `written_2/travel_guides/berlitz2/Canada-History.txt` has the name `John Simcoe`. `grep -rn` also shows the lines, here we can see that lines 25, 26, and 27 all include the string `John Simcoe`.
+
+
+Running `grep -rn "Chronicles" written_2/travel_guides/berlitz1/` shows that `grep -rn` can return multiple files containing the same pattern.
+```
+$  grep -rn "Chronicles" written_2/travel_guides/berlitz1/
+written_2/travel_guides/berlitz1/HistoryJapan.txt:9:        (“Chronicles of Japan”), the islands of Japan were born of a marriage
+written_2/travel_guides/berlitz1/HistoryJapan.txt:23:        Prehistory and Early Chronicles
+written_2/travel_guides/berlitz1/WhereToGreek.txt:352:        Parian Chronicles, a history of ancient Greece enscribed on marble
+```
