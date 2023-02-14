@@ -26,10 +26,35 @@ Running `$  grep -o "pyramid" written_2/travel_guides/berlitz1/*.txt`
 Recursively searches files for a line. The `r` pertains to recursion while the `l` lists the file names. This command is ran using the format; `grep -rl "<pattern>" <file_path>` 
 
 Running `$  grep -rl "vistas" written_2/`
-![Image]()
+```
+$ grep -rl "vistas" written_2/
+written_2/travel_guides/berlitz1/IntroDublin.txt
+written_2/travel_guides/berlitz1/IntroLakeDistrict.txt
+written_2/travel_guides/berlitz1/IntroMadeira.txt
+written_2/travel_guides/berlitz1/WhereToIbiza.txt
+written_2/travel_guides/berlitz1/WhereToIsrael.txt
+written_2/travel_guides/berlitz1/WhereToJerusalem.txt
+written_2/travel_guides/berlitz1/WhereToLakeDistrict.txt
+written_2/travel_guides/berlitz1/WhereToMadeira.txt
+written_2/travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+written_2/travel_guides/berlitz2/China-WhereToGo.txt
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
+written_2/travel_guides/berlitz2/Portugal-WhereToGo.txt
+written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+```
+This first example searches for the given pattern throughput a whole directory and is useful in returning the exact files with the pattern found in them.
+
+Running `$  grep -rl "giraffe" written_2/travel_guides/berlitz2`
+```
+$ grep -rl "giraffe" written_2/travel_guides/berlitz2
+written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
+```
+This second example searches for the pattern in a specified path `travel_guides/berlitz2` withing the `written_2` directory. 
+
+---
 
 `grep -c`
-outputs the count of the amount of matching lines only
+Outputs the count of the amount of matching lines only. The returned integer is like a count for the number of times the pattern is matched within a file.
 
 `grep -l`
 outputs the count of the amount of matching files only
