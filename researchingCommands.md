@@ -54,19 +54,127 @@ This second example searches for the pattern in a specified path `travel_guides/
 ---
 
 `grep -c`
-Outputs the count of the amount of matching lines only. The returned integer is like a count for the number of times the pattern is matched within a file. This command is ran using the formatS `grep -c "<pattern>" <file_path>
+Outputs the count of the amount of matching lines only. The returned integer is like a count for the number of times the pattern is matched within a file. This command is ran using the formatS `grep -c "<pattern>" <file_path>`
 
 Running `grep -c "giraffe" written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt`
 ```
 $ grep -c "giraffe" written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt 
 1
 ```
-This shows that the word `giraffe` has only been found one time in the file `PuertoRico-WhatToDo.txt`
+This shows that the word `giraffe` has only been found one time in the single file `PuertoRico-WhatToDo.txt`
+
+Another example is using `grep -c` for a larger directory with multiple files:
+Running `grep -c "vistas" written_2/travel_guides/berlitz1/*.txt`
+```
+$  grep -c "vistas" written_2/travel_guides/berlitz1/*.txt
+written_2/travel_guides/berlitz1/HandRHawaii.txt:0
+written_2/travel_guides/berlitz1/HandRHongKong.txt:0
+written_2/travel_guides/berlitz1/HandRIbiza.txt:0
+written_2/travel_guides/berlitz1/HandRIsrael.txt:0
+written_2/travel_guides/berlitz1/HandRIstanbul.txt:0
+written_2/travel_guides/berlitz1/HandRJamaica.txt:0
+written_2/travel_guides/berlitz1/HandRJerusalem.txt:0
+written_2/travel_guides/berlitz1/HandRLakeDistrict.txt:0
+written_2/travel_guides/berlitz1/HandRLasVegas.txt:0
+written_2/travel_guides/berlitz1/HandRLisbon.txt:0
+written_2/travel_guides/berlitz1/HandRLosAngeles.txt:0
+written_2/travel_guides/berlitz1/HandRMadeira.txt:0
+written_2/travel_guides/berlitz1/HandRMadrid.txt:0
+written_2/travel_guides/berlitz1/HandRMallorca.txt:0
+written_2/travel_guides/berlitz1/HistoryDublin.txt:0
+written_2/travel_guides/berlitz1/HistoryEdinburgh.txt:0
+written_2/travel_guides/berlitz1/HistoryEgypt.txt:0
+written_2/travel_guides/berlitz1/HistoryFrance.txt:0
+written_2/travel_guides/berlitz1/HistoryFWI.txt:0
+written_2/travel_guides/berlitz1/HistoryGreek.txt:0
+written_2/travel_guides/berlitz1/HistoryHawaii.txt:0
+written_2/travel_guides/berlitz1/HistoryHongKong.txt:0
+written_2/travel_guides/berlitz1/HistoryIbiza.txt:0
+written_2/travel_guides/berlitz1/HistoryIndia.txt:0
+written_2/travel_guides/berlitz1/HistoryIsrael.txt:0
+written_2/travel_guides/berlitz1/HistoryIstanbul.txt:0
+written_2/travel_guides/berlitz1/HistoryItaly.txt:0
+written_2/travel_guides/berlitz1/HistoryJamaica.txt:0
+written_2/travel_guides/berlitz1/HistoryJapan.txt:0
+written_2/travel_guides/berlitz1/HistoryJerusalem.txt:0
+written_2/travel_guides/berlitz1/HistoryLakeDistrict.txt:0
+written_2/travel_guides/berlitz1/HistoryLasVegas.txt:0
+written_2/travel_guides/berlitz1/HistoryMadeira.txt:0
+written_2/travel_guides/berlitz1/HistoryMadrid.txt:0
+written_2/travel_guides/berlitz1/HistoryMalaysia.txt:0
+written_2/travel_guides/berlitz1/HistoryMallorca.txt:0
+written_2/travel_guides/berlitz1/IntroDublin.txt:1
+written_2/travel_guides/berlitz1/IntroEdinburgh.txt:0
+written_2/travel_guides/berlitz1/IntroEgypt.txt:0
+written_2/travel_guides/berlitz1/IntroFrance.txt:0
+written_2/travel_guides/berlitz1/IntroFWI.txt:0
+written_2/travel_guides/berlitz1/IntroGreek.txt:0
+written_2/travel_guides/berlitz1/IntroHongKong.txt:0
+written_2/travel_guides/berlitz1/IntroIbiza.txt:0
+written_2/travel_guides/berlitz1/IntroIndia.txt:0
+written_2/travel_guides/berlitz1/IntroIsrael.txt:0
+written_2/travel_guides/berlitz1/IntroIstanbul.txt:0
+written_2/travel_guides/berlitz1/IntroItaly.txt:0
+written_2/travel_guides/berlitz1/IntroJamaica.txt:0
+written_2/travel_guides/berlitz1/IntroJapan.txt:0
+written_2/travel_guides/berlitz1/IntroJerusalem.txt:0
+written_2/travel_guides/berlitz1/IntroLakeDistrict.txt:1
+written_2/travel_guides/berlitz1/IntroLasVegas.txt:0
+written_2/travel_guides/berlitz1/IntroLosAngeles.txt:0
+written_2/travel_guides/berlitz1/IntroMadeira.txt:1
+written_2/travel_guides/berlitz1/IntroMadrid.txt:0
+written_2/travel_guides/berlitz1/IntroMalaysia.txt:0
+written_2/travel_guides/berlitz1/IntroMallorca.txt:0
+written_2/travel_guides/berlitz1/JungleMalaysia.txt:0
+written_2/travel_guides/berlitz1/WhatToDublin.txt:0
+written_2/travel_guides/berlitz1/WhatToEdinburgh.txt:0
+written_2/travel_guides/berlitz1/WhatToEgypt.txt:0
+written_2/travel_guides/berlitz1/WhatToFrance.txt:0
+written_2/travel_guides/berlitz1/WhatToFWI.txt:0
+written_2/travel_guides/berlitz1/WhatToGreek.txt:0
+written_2/travel_guides/berlitz1/WhatToHawaii.txt:0
+written_2/travel_guides/berlitz1/WhatToHongKong.txt:0
+written_2/travel_guides/berlitz1/WhatToIbiza.txt:0
+written_2/travel_guides/berlitz1/WhatToIndia.txt:0
+written_2/travel_guides/berlitz1/WhatToIsrael.txt:0
+written_2/travel_guides/berlitz1/WhatToIstanbul.txt:0
+written_2/travel_guides/berlitz1/WhatToItaly.txt:0
+written_2/travel_guides/berlitz1/WhatToJamaica.txt:0
+written_2/travel_guides/berlitz1/WhatToJapan.txt:0
+written_2/travel_guides/berlitz1/WhatToLakeDistrict.txt:0
+written_2/travel_guides/berlitz1/WhatToLasVegas.txt:0
+written_2/travel_guides/berlitz1/WhatToLosAngeles.txt:0
+written_2/travel_guides/berlitz1/WhatToMadeira.txt:0
+written_2/travel_guides/berlitz1/WhatToMalaysia.txt:0
+written_2/travel_guides/berlitz1/WhatToMallorca.txt:0
+written_2/travel_guides/berlitz1/WhereToDublin.txt:0
+written_2/travel_guides/berlitz1/WhereToEdinburgh.txt:0
+written_2/travel_guides/berlitz1/WhereToEgypt.txt:0
+written_2/travel_guides/berlitz1/WhereToFrance.txt:0
+written_2/travel_guides/berlitz1/WhereToFWI.txt:0
+written_2/travel_guides/berlitz1/WhereToGreek.txt:0
+written_2/travel_guides/berlitz1/WhereToHawaii.txt:0
+written_2/travel_guides/berlitz1/WhereToHongKong.txt:0
+written_2/travel_guides/berlitz1/WhereToIbiza.txt:2
+written_2/travel_guides/berlitz1/WhereToIndia.txt:0
+written_2/travel_guides/berlitz1/WhereToIsrael.txt:1
+written_2/travel_guides/berlitz1/WhereToIstanbul.txt:0
+written_2/travel_guides/berlitz1/WhereToItaly.txt:0
+written_2/travel_guides/berlitz1/WhereToJapan.txt:0
+written_2/travel_guides/berlitz1/WhereToJerusalem.txt:2
+written_2/travel_guides/berlitz1/WhereToLakeDistrict.txt:1
+written_2/travel_guides/berlitz1/WhereToLosAngeles.txt:0
+written_2/travel_guides/berlitz1/WhereToMadeira.txt:1
+written_2/travel_guides/berlitz1/WhereToMadrid.txt:0
+written_2/travel_guides/berlitz1/WhereToMalaysia.txt:0
+written_2/travel_guides/berlitz1/WhereToMallorca.txt:0
+```
+The results show that 8 of the `.txt` files in `written_2/travel_guides/berlitz1/` have the string `vistas` and `-c` returns the amount of times the pattern is found in the respective file.
 
 ---
 
 `grep -rn`
-Recursively searches for pattern where `r` pertains to recursion and `n` pertains to find the file and line where the pattern is found. This command is ran using the format: `grep -rn "<pattern>" <file_path>
+Recursively searches for pattern where `r` pertains to recursion and `n` pertains to find the file and line where the pattern is found. This command is ran using the format: `grep -rn "<pattern>" <file_path>`
 
 Running
 ```
